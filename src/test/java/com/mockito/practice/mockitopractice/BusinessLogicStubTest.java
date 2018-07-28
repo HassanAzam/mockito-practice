@@ -4,10 +4,10 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class BusinessLogicTest {
+public class BusinessLogicStubTest {
 
 	@Test
-	public void testfindGreatestFromAllData() {
+	public void testfindGreatestFromAllData(){
 		BusinessLogicImpl businessLogic = new BusinessLogicImpl(new DataServiceStub());
 		assertEquals(4,businessLogic.findGreatestFromAllData());
 	}
