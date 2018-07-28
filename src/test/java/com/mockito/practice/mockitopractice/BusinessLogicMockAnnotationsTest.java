@@ -33,5 +33,13 @@ public class BusinessLogicMockAnnotationsTest {
 		
 		assertEquals(2,businessLogic.findGreatestFromAllData());
 	}
+	
+	@Test
+	public void testfindGreatestFromAllData_ForEmpty(){		
+		
+		when(dataServiceMock.retrieveAllData()).thenReturn(new int[] {});
+		
+		assertEquals(Integer.MIN_VALUE,businessLogic.findGreatestFromAllData());
+	}
 
 }
