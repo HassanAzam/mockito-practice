@@ -5,6 +5,10 @@ package com.mockito.practice.mockitopractice;
 public class BusinessLogicImpl {
 	private DataService dataService;
 	
+	public BusinessLogicImpl(DataService stub) {
+		this.dataService = stub;
+	}
+	
 	int findGreatestFromAllData() {
 		int [] data = dataService.retrieveAllData();
 		int greatest = Integer.MIN_VALUE;
